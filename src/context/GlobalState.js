@@ -4,6 +4,7 @@ import AppReducer from './AppReducer';
 // Initial state
 const initialState = {
   transactions: [],
+  theme: 'dark',
 };
 
 //Create context
@@ -28,12 +29,21 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
+  function changeTheme(theme) {
+    dispatch({
+      type: 'CHANGE_THEME',
+      payload: theme,
+    });
+  }
+
   return (
     <GlobalContext.Provider
       value={{
         transactions: state.transactions,
+        theme: state.theme,
         deleteTransaction,
         addTransaction,
+        changeTheme,
       }}
     >
       {children}

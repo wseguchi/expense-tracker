@@ -10,7 +10,7 @@ import Credits from './Credits';
 function App() {
   return (
     <div id='container'>
-      <GlobalProvider className='main'>
+      <GlobalProvider>
         <Header />
         <Balance />
         <IncomeExpenses />

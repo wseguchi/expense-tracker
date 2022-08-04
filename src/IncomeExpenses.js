@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from './context/GlobalState';
+import { ArrowUpIcon, ArrowDownIcon } from '@radix-ui/react-icons';
 
 export const IncomeExpenses = () => {
   const { transactions } = useContext(GlobalContext);
@@ -19,13 +20,19 @@ export const IncomeExpenses = () => {
     <div>
       <div className='inc-exp-container'>
         <div>
-          <h4>Income</h4>
+          <h4>
+            <ArrowUpIcon className='icon' />
+            Income
+          </h4>
           <p id='money-plus' className='money plus'>
             ${income}
           </p>
         </div>
         <div>
-          <h4>Expense</h4>
+          <h4>
+            <ArrowDownIcon className='icon' />
+            Expense
+          </h4>
           <p id='money-minus' className='money minus'>
             -${expense}
           </p>

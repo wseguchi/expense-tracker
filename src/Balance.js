@@ -16,9 +16,7 @@ export const Balance = () => {
         <br />
         Balance
       </h2>
-      <h1
-        className={total < 0 ? 'balance balance-red' : 'balance balance-green'}
-      >
+      <h1 className='balance'>
         {sign}${Math.abs(total).toFixed(2)}
       </h1>
     </div>

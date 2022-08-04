@@ -12,6 +12,11 @@ export default (state, action) => {
         ...state,
         transactions: [action.payload, ...state.transactions],
       };
+    case 'CHANGE_THEME':
+      return {
+        ...state,
+        theme: action.payload,
+      };
     default:
       return state;
   }

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Inter:wght@100;300;500;700&family=Rubik:wght@400;500&display=swap');
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,13 +10,20 @@ body {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
+  color: whitesmoke;
   background-color: #21252b;
-  background-image: linear-gradient(to bottom right, #2c313a, #16181d);
+  background-image: linear-gradient(to bottom right, #373d49, #16181d);
   font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body.light {
+  color: #333;
+  background-color: #f2f2f2;
+  background-image: linear-gradient(to bottom right, whitesmoke, #b3b3ff);
 }
 
 a {
@@ -35,13 +40,11 @@ h2 {
   margin: 0;
   font-weight: 400;
   font-size: 2.6em;
-  color: whitesmoke;
   font-family: 'Rubik', sans-serif;
   line-height: 1em;
 }
 
 h3 {
-  color: whitesmoke;
   padding-bottom: 5px;
   margin: 25px 0 10px 0;
   font-weight: 300;
@@ -49,12 +52,17 @@ h3 {
   font-size: medium;
   letter-spacing: 2px;
   display: flex;
+  align-items: center;
 }
 
 h4 {
+  color: #333;
   font-weight: 400;
   text-transform: uppercase;
   font-size: small;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #container {
@@ -78,7 +86,6 @@ h4 {
 .title {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  color: whitesmoke;
   font-size: 1em;
   text-transform: uppercase;
 }
@@ -92,9 +99,6 @@ h4 {
   text-align: right;
   font-weight: 500;
   color: #330066;
-}
-
-.balance-red {
 }
 
 .inc-exp-container {
@@ -139,36 +143,39 @@ h4 {
   color: #333;
   display: flex;
   justify-content: space-between;
-  position: relative;
-  padding: 10px;
   margin: 10px 0;
   border-radius: 3px;
   font-weight: 300;
   text-transform: capitalize;
 }
 
+.list div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 3px 0 0 3px;
+}
+
 .list li.plus {
-  border-right: 7px solid #26a65b;
+  border-left: 7px solid #26a65b;
 }
 
 .list li.minus {
-  border-right: 7px solid #c0392b;
+  border-left: 7px solid #c0392b;
 }
 
 .delete-btn {
+  display: flex;
+  align-items: center;
   cursor: pointer;
-  background-color: #e74c3c;
   border: 0;
-  color: #fff;
-  font-size: 20px;
-  line-height: 20px;
-  padding: 2px 5px;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(-100%, -50%);
-  opacity: 0;
+  opacity: 0.3;
   transition: opacity 0.3s ease;
+  padding-right: 10px;
+  background-color: transparent;
+  border-radius: 3px;
+  color: #333;
 }
 
 .list li:hover .delete-btn {
@@ -183,6 +190,47 @@ h4 {
   margin-top: 20px;
 }
 
+.radio {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.radio input,
+.radio span {
+  cursor: pointer;
+}
+
+.radio span:hover,
+.radio span:active,
+.radio span:focus {
+  color: #8066ff;
+}
+
+input[type='radio']:after {
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  background-color: whitesmoke;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 1px solid white;
+  margin-right: 3px;
+}
+
+input[type='radio']:checked:after {
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+
+  background-color: #8066ff;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 1px solid white;
+}
+
 label {
   display: inline-block;
   font-family: 'Inter', sans-serif;
@@ -191,12 +239,13 @@ label {
   font-size: small;
   letter-spacing: 2px;
   margin: 0;
+  cursor: pointer;
 }
 
 input[type='text'],
 input[type='number'] {
-  border: 1px solid #dedede;
-  border-radius: 2px;
+  border: none;
+  border-radius: 3px;
   display: block;
   font-size: 16px;
   padding: 12px;
@@ -204,42 +253,57 @@ input[type='number'] {
   font-family: 'Rubik', sans-serif;
   font-weight: 200;
   margin: 0;
+  background-color: whitesmoke;
 }
 
 .btn {
   cursor: pointer;
   background-color: #9c88ff;
   background-image: linear-gradient(to bottom right, #9c88ff, #8066ff);
-  box-shadow: var(--box-shadow);
   color: whitesmoke;
   border: 0;
-  display: block;
   font-size: 16px;
   padding: 10px;
   width: 100%;
   border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn:focus,
 .delete-btn:focus {
-  outline: 0;
+  outline: none;
+  border: 2px solid #8066ff !important;
+}
+
+.img-delete {
+  width: 20px;
+  position: relative;
 }
 
 .form-control {
   display: flex;
 }
 
-.rotate {
-  transform: rotate(180deg);
-  position: relative;
-  top: -2px;
+.icon {
+  margin-right: 3px;
+}
+
+.history {
+  opacity: 0;
+  transition: visibility 1s, opacity 0.3s linear;
+}
+.show {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition: visibility 0s, opacity 0.3s linear;
 }
 
 .credits {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   letter-spacing: 1px;
-  color: #e6e6e6;
   font-size: x-small;
   text-align: center;
   border-top: 0.5px solid #666;
@@ -268,7 +332,7 @@ input[type='number'] {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #9c88ff;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -286,11 +350,11 @@ input[type='number'] {
 }
 
 input:checked + .slider {
-  background-color: #9c88ff;
+  background-color: #ccc;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #9c88ff;
+  box-shadow: 0 0 1px #ccc;
 }
 
 input:checked + .slider:before {
