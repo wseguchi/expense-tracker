@@ -10,9 +10,9 @@ export const Balance = () => {
   const sign = total < 0 ? '-' : '';
 
   return (
-    <div>
-      <h3>Your Balance</h3>
-      <h1 id='balance'>
+    <div className='balance'>
+      <h4>Your Balance</h4>
+      <h1 className={total < 0 ? 'balance-red' : 'balance-green'}>
         {sign}${Math.abs(total)}
       </h1>
     </div>

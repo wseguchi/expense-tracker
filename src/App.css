@@ -1,15 +1,19 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
   box-sizing: border-box;
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
-
+  min-height: 100vh;
   background-color: #282c34;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -19,53 +23,59 @@ a {
   color: #61dafb;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-/* Model CSS */
-
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-
-:root {
-  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #f7f7f7;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  margin: 0;
-  font-family: 'Lato', sans-serif;
-}
-
-.container {
-  margin: 30px auto;
+#container {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #4e5565;
+  background-image: linear-gradient(to bottom right, #4e5565, #434956);
   width: 350px;
 }
 
 h1 {
   letter-spacing: 1px;
   margin: 0;
+  font-weight: 500;
 }
 
 h3 {
-  border-bottom: 1px solid #bbb;
-  padding-bottom: 10px;
-  margin: 40px 0 10px;
+  padding-bottom: 5px;
+  margin: 60px 0 10px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: small;
+  letter-spacing: 2px;
 }
 
 h4 {
   margin: 0;
   text-transform: uppercase;
+  font-weight: 300;
+}
+
+li {
+  background-color: #61dafb;
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 100;
+  margin-bottom: 60px;
+  color: whitesmoke;
+  font-size: 2em;
+}
+
+.balance {
+  position: relative;
+  top: -60px;
+  background-color: #9c88ff;
+  background-image: linear-gradient(to bottom right, #9c88ff, #8066ff);
+  padding: 10px;
+  border-radius: 3px;
+  line-height: 2.4em;
+}
+
+.balance-red {
+  color: #bc1010;
 }
 
 .inc-exp-container {
@@ -74,7 +84,9 @@ h4 {
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
+  position: relative;
+  top: -10px;
+  border-radius: 3px;
 }
 
 .inc-exp-container > div {
@@ -100,39 +112,6 @@ h4 {
   color: #c0392b;
 }
 
-label {
-  display: inline-block;
-  margin: 10px 0;
-}
-
-input[type='text'],
-input[type='number'] {
-  border: 1px solid #dedede;
-  border-radius: 2px;
-  display: block;
-  font-size: 16px;
-  padding: 10px;
-  width: 100%;
-}
-
-.btn {
-  cursor: pointer;
-  background-color: #9c88ff;
-  box-shadow: var(--box-shadow);
-  color: #fff;
-  border: 0;
-  display: block;
-  font-size: 16px;
-  margin: 10px 0 30px;
-  padding: 10px;
-  width: 100%;
-}
-
-.btn:focus,
-.delete-btn:focus {
-  outline: 0;
-}
-
 .list {
   list-style-type: none;
   padding: 0;
@@ -148,14 +127,17 @@ input[type='number'] {
   position: relative;
   padding: 10px;
   margin: 10px 0;
+  border-radius: 3px;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 .list li.plus {
-  border-right: 5px solid #2ecc71;
+  border-right: 7px solid #2ecc71;
 }
 
 .list li.minus {
-  border-right: 5px solid #c0392b;
+  border-right: 7px solid #c0392b;
 }
 
 .delete-btn {
@@ -176,4 +158,57 @@ input[type='number'] {
 
 .list li:hover .delete-btn {
   opacity: 1;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+label {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: small;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+input[type='text'],
+input[type='number'] {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 15px;
+  width: 100%;
+  font-family: 'Inconsolata', monospace;
+  margin: 0;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #9c88ff;
+  background-image: linear-gradient(to bottom right, #9c88ff, #8066ff);
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+.form-control {
+  display: flex;
 }

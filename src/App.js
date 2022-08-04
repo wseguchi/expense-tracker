@@ -8,7 +8,7 @@ import { GlobalProvider } from './context/GlobalState';
 
 function App() {
   return (
-    <GlobalProvider>
+    <GlobalProvider className='main'>
       <Header />
       <div id='container'>
         <Balance />
