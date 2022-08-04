@@ -26,8 +26,10 @@ export const AddTransaction = () => {
   };
 
   return (
-    <div>
-      <h3>Add a new transaction</h3>
+    <div id='add-transaction'>
+      <h3>
+        Add a new transaction <div className='rotate'>&#8963;</div>
+      </h3>
       <form className='form-container' onSubmit={onSubmit}>
         <div className='form-control'>
           <label htmlFor='text'></label>
@@ -47,7 +49,7 @@ export const AddTransaction = () => {
             placeholder='Enter amount...'
           />
         </div>
-        <button className='btn'>Add</button>
+        <button className='btn'>Add Transaction</button>
       </form>
     </div>
   );

@@ -5,18 +5,20 @@ import { Header } from './Header.js';
 import { IncomeExpenses } from './IncomeExpenses';
 import { TransactionList } from './TransactionList';
 import { GlobalProvider } from './context/GlobalState';
+import Credits from './Credits';
 
 function App() {
   return (
-    <GlobalProvider className='main'>
-      <Header />
-      <div id='container'>
+    <div id='container'>
+      <GlobalProvider className='main'>
+        <Header />
         <Balance />
         <IncomeExpenses />
         <TransactionList />
         <AddTransaction />
-      </div>
-    </GlobalProvider>
+        <Credits />
+      </GlobalProvider>
+    </div>
   );
 }
 

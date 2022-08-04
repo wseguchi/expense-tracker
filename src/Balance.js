@@ -10,10 +10,16 @@ export const Balance = () => {
   const sign = total < 0 ? '-' : '';
 
   return (
-    <div className='balance'>
-      <h4>Your Balance</h4>
-      <h1 className={total < 0 ? 'balance-red' : 'balance-green'}>
-        {sign}${Math.abs(total)}
+    <div>
+      <h2>
+        Your
+        <br />
+        Balance
+      </h2>
+      <h1
+        className={total < 0 ? 'balance balance-red' : 'balance balance-green'}
+      >
+        {sign}${Math.abs(total).toFixed(2)}
       </h1>
     </div>
   );
