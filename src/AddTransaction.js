@@ -64,27 +64,13 @@ export const AddTransaction = () => {
               <label htmlFor='expense'>Expense</label>
           </span>
         </div>
-        {/* <div className='form-control selector'>
-          <div
-            id='selector-income'
-            className='selector-item border-radius-left'
-          >
-            Income
-          </div>
-          <div
-            id='selector-expense'
-            className='selector-item border-radius-right'
-          >
-            Expense
-          </div>
-        </div> */}
         <div className='form-control'>
           <label htmlFor='text'></label>
           <input
             type='text'
             value={text}
             onChange={(e) => setText(e.target.value)}
-            placeholder='Enter text... (eg. Food)'
+            placeholder='Transaction name... (eg. Grosseries)'
           />
         </div>
         <div className='form-control'>
@@ -93,7 +79,7 @@ export const AddTransaction = () => {
             type='number'
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
-            placeholder='Enter amount... (eg. $12.90)'
+            placeholder='Amount... (eg. $12.90)'
           />
         </div>
         <button className='btn'>
