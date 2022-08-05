@@ -41,7 +41,7 @@ h2 {
   font-weight: 400;
   font-size: 2.6em;
   font-family: 'Rubik', sans-serif;
-  line-height: 1em;
+  line-height: 0.95em;
 }
 
 h3 {
@@ -68,10 +68,10 @@ h4 {
 #container {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
   justify-content: space-between;
-  width: 375px;
-  padding: 15px;
+  width: 360px;
+  padding: 10px;
 }
 
 #header {
@@ -93,7 +93,7 @@ h4 {
 .balance {
   background-color: #9c88ff;
   background-image: linear-gradient(to bottom right, #aa99ff, #8066ff);
-  margin-top: 15px;
+  margin-top: 10px;
   padding: 10px;
   border-radius: 3px;
   text-align: right;
@@ -186,7 +186,7 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 20px;
+  gap: 15px;
   margin-top: 20px;
 }
 
@@ -218,7 +218,7 @@ input[type='radio']:after {
   border: 1px solid white;
   position: relative;
   top: -1px;
-  left: -2px;
+  left: -1px;
 }
 
 input[type='radio']:checked:after {
@@ -250,6 +250,7 @@ input[type='number'] {
   display: block;
   padding: 12px;
   width: 100%;
+  font-size: 1em;
   font-family: 'Rubik', sans-serif;
   font-weight: 200;
   margin: 0;
