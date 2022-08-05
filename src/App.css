@@ -23,7 +23,7 @@ body {
 body.light {
   color: #333;
   background-color: #f2f2f2;
-  background-image: linear-gradient(to bottom right, whitesmoke, #b3b3ff);
+  background-image: linear-gradient(to bottom right, white, #e6e6ff, #9999ff);
 }
 
 a {
@@ -269,22 +269,47 @@ input[type='number'] {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-family: 'Rubik', sans-serif;
 }
 
 .btn:focus,
 .delete-btn:focus {
   outline: none;
-  border: 2px solid #8066ff !important;
-}
-
-.img-delete {
-  width: 20px;
-  position: relative;
 }
 
 .form-control {
   display: flex;
 }
+
+/* .selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #333;
+  font-weight: 200;
+  text-transform: uppercase;
+  font-size: small;
+  cursor: pointer;
+  gap: 20px;
+}
+
+.selector-item {
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #b3b3b3;
+  border-radius: 3px;
+}
+
+.selector-item:hover,
+.selected {
+  background-color: #9c88ff;
+  color: whitesmoke;
+} */
 
 .icon {
   margin-right: 3px;
@@ -294,6 +319,7 @@ input[type='number'] {
   opacity: 0;
   transition: visibility 1s, opacity 0.3s linear;
 }
+
 .show {
   visibility: visible !important;
   opacity: 1 !important;

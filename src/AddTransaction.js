@@ -5,21 +5,31 @@ import { PlusCircledIcon } from '@radix-ui/react-icons';
 export const AddTransaction = () => {
   const [text, setText] = useState('');
   const [amount, setAmount] = useState('');
+  const [type, setType] = useState('');
 
   const { addTransaction } = useContext(GlobalContext);
 
   const onSubmit = (e) => {
     e.preventDefault();
 
-    const newTransaction = {
-      id: Date.now(),
-      text,
-      amount: +amount,
-    };
-
-    if (text === '' || amount == 0) {
+    if (type === '') {
+      alert('Please choose a type: Income or Expense');
+    } else if (text === '' || amount == 0) {
       alert('Please add a label and amount');
     } else {
+      let newAmount;
+      if (type === 'expense') {
+        newAmount = -parseFloat(amount);
+      } else {
+        newAmount = parseFloat(amount);
+      }
+
+      const newTransaction = {
+        id: Date.now(),
+        text,
+        amount: newAmount,
+      };
+
       addTransaction(newTransaction);
       setText('');
       setAmount('');
@@ -34,14 +44,40 @@ export const AddTransaction = () => {
       <form className='form-container' onSubmit={onSubmit}>
         <div className='form-control radio'>
           <span>
-            <input type='radio' id='html' name='fav_language' value='HTML' /> {' '}
-            <label htmlFor='html'>Income</label>
+            <input
+              type='radio'
+              value='income'
+              id='income'
+              name='type'
+              onChange={(e) => setType(e.target.value)}
+            />
+              <label htmlFor='income'>Income</label>
           </span>
           <span>
-            <input type='radio' id='css' name='fav_language' value='CSS' /> {' '}
-            <label htmlFor='css'>Expense</label>
+            <input
+              type='radio'
+              value='expense'
+              id='expense'
+              name='type'
+              onChange={(e) => setType(e.target.value)}
+            />
+              <label htmlFor='expense'>Expense</label>
           </span>
         </div>
+        {/* <div className='form-control selector'>
+          <div
+            id='selector-income'
+            className='selector-item border-radius-left'
+          >
+            Income
+          </div>
+          <div
+            id='selector-expense'
+            className='selector-item border-radius-right'
+          >
+            Expense
+          </div>
+        </div> */}
         <div className='form-control'>
           <label htmlFor='text'></label>
           <input
