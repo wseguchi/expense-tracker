@@ -23,7 +23,7 @@ body {
 body.light {
   color: #333;
   background-color: #f2f2f2;
-  background-image: linear-gradient(to bottom right, white, #e6e6ff, #9999ff);
+  background-image: linear-gradient(to bottom right, #e6e6ff, #9999ff);
 }
 
 a {
