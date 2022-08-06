@@ -1,13 +1,38 @@
-## Expense Tracker
+# Expense Tracker
 
-Keep track of income and expenses. Add and remove items and save to local storage
+![Design preview for the Expense Tracker App](./app-preview.png)
 
-## Project Specifications
+## Welcome / Bem vindo!
 
-- ReactJS
-- Create UI for project
-- Display transaction items in DOM
-- Show balance, expense and income totals
-- Add new transation and reflect in total
-- Delete items from DOM
-- Uses global state
+Thanks for checking out my front-end project.<br>
+🇧🇷/🇵🇹 _Obrigado por conferir meu projeto de front-end._
+
+## Overview
+
+An app to keep track of income and expenses.<br>
+_Um aplicativo para controlar suas rendas e despesas_
+
+## Built with
+
+- React JS;
+- React Context API;
+- Mobile-first workflow;
+- Radix Icons
+
+## Features
+
+- Displays transaction items in DOM;
+- Shows balance, expense and income totals;
+- Adds new transactions and reflects in total;
+- Deletes items from DOM;
+
+## Links
+
+- App URL (Deploy): [https://wseguchi.github.io/expense-tracker/](https://wseguchi.github.io/expense-tracker/)
+- Github Repository: [https://github.com/wseguchi/expense-tracker](https://github.com/wseguchi/expense-tracker)
+
+## Author
+
+- Wildson Seguchi
+- [Github](https://github.com/wseguchi)
+- [LinkedIn](https://www.linkedin.com/in/wildson-seguchi/)
