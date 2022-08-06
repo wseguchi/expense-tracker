@@ -21,6 +21,7 @@ _Um aplicativo para controlar suas rendas e despesas_
 
 ## Features
 
+- Dark and Light modes;
 - Displays transaction items in DOM;
 - Shows balance, expense and income totals;
 - Adds new transactions and reflects in total;
