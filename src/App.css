@@ -12,7 +12,7 @@ body {
   justify-content: center;
   color: whitesmoke;
   background-color: #21252b;
-  background-image: linear-gradient(to bottom right, #373d49, #16181d);
+  background-image: linear-gradient(to bottom right, #2c313a, #16181d);
   font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -27,7 +27,15 @@ body.light {
 }
 
 a {
-  color: #61dafb;
+  color: whitesmoke;
+}
+
+.light a {
+  color: #555;
+}
+
+a:hover {
+  color: #9999ff;
 }
 
 h1 {
@@ -317,6 +325,12 @@ input[type='number']:focus {
   margin-top: 20px;
 }
 
+.credits-social-media {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 10px;
+}
 /*-------------*/
 .switch {
   position: relative;
