@@ -10,14 +10,14 @@ Thanks for checking out my front-end project.<br>
 ## Overview
 
 An app to keep track of income and expenses.<br>
-_Um aplicativo para controlar suas rendas e despesas_
+_Um aplicativo para controlar suas rendas e despesas._
 
 ## Built with
 
 - React JS;
 - React Context API;
 - Mobile-first workflow;
-- Radix Icons
+- Radix Icons.
 
 ## Features
 
@@ -25,7 +25,7 @@ _Um aplicativo para controlar suas rendas e despesas_
 - Displays transaction items in DOM;
 - Shows balance, expense and income totals;
 - Adds new transactions and reflects in total;
-- Deletes items from DOM;
+- Deletes items from DOM.
 
 ## Links
 
