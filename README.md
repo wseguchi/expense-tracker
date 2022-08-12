@@ -34,6 +34,8 @@ _Um aplicativo para controlar suas rendas e despesas._
 
 ## Author
 
+## Author
+
 - Wildson Seguchi
 - [Github](https://github.com/wseguchi)
-- [LinkedIn](https://www.linkedin.com/in/wildson-seguchi/)
+- [LinkedIn](https://www.linkedin.com/in/wildson-seguchi/?locale=en_US)
